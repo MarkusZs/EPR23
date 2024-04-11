@@ -33,23 +33,6 @@ namespace Drawing
         {
             startPoint = e.GetPosition(canvas);
 
-            if (rectangleButton.IsMouseOver)
-            {
-                currentShape = new Rectangle
-                {
-                    Stroke = currentBrush,
-                    StrokeThickness = 1
-                };
-            }
-            else if (circleButton.IsMouseOver)
-            {
-                currentShape = new Ellipse
-                {
-                    Stroke = currentBrush,
-                    StrokeThickness = 1
-                };
-            }
-
             if (currentShape != null)
             {
                 canvas.Children.Add(currentShape);
@@ -66,10 +49,8 @@ namespace Drawing
                 {
                     DrawRectangle(startPoint, currentPoint, (Rectangle)currentShape);
                 }
-                else if (currentShape is Ellipse)
-                {
-                    DrawEllipse(startPoint, currentPoint, (Ellipse)currentShape);
-                }
+                // ...
+                // TODO
                 
             }
         }
@@ -82,7 +63,6 @@ namespace Drawing
         private void DrawRectangle(Point start, Point end, Rectangle rectangle)
         {
             // TODO
-
         }
 
         private void DrawEllipse(Point start, Point end, Ellipse ellipse)
