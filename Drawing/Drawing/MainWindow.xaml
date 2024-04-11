@@ -1,0 +1,14 @@
+﻿<Window x:Class="Drawing.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    	Title="Drawing" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="canvas" Background="White" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp"/>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Vertical" Margin="0,10,10,0">
+            <Button x:Name="rectangleButton" Content="Rectangle" Click="RectangleButton_Click"/>
+            <Button x:Name="circleButton" Content="Circle" Click="CircleButton_Click"/>
+            <Button x:Name="lineButton" Content="Line" Click="LineButton_Click"/>
+        </StackPanel>
+    </Grid>
+
+</Window>
